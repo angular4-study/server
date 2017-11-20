@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node搭建的服务器，供angular4学习http调用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular4-study/server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angular4-study/server/issues"
+  },
+  "homepage": "https://github.com/angular4-study/server#readme",
+  "dependencies": {
+    "@types/express": "^4.0.39",
+    "@types/node": "^8.0.53",
+    "express": "^4.16.2"
+  }
+}
