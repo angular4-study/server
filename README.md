@@ -28,3 +28,11 @@ Node搭建的服务器，供angular4学习http调用
 - 安装node monitor：会监控你的代码，当代码更新后，会自动加载最新的代码,npm i -g nodemon
 - 装好后，启动服务器不是用node，而是用nodemon启动
 
+## WebSocket协议：
+- 允许在同一个连接中，同时进行双方向的数据传递。
+- 客户端和服务器都可以主动发送数据，而不需要明确的请求。
+- 是一个长连接协议，不需要在每次发送和接收数据时，重建建立连接，所以延迟低，不需要每次请求时都携带一些
+连接相关的信息。所以传递的数据比http少。
+- Node生态圈中，有很多项目都实现了WebSocket协议，我们要使用的是ws
+- 安装ws依赖库：npm install ws --save
+- 安装类型文件：npm install @types/ws --save-dev
