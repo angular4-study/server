@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var ws_1 = require("ws");
+require("rxjs/add/operator/find");
+require("rxjs/add/operator/map");
 var app = express();
 var Product = (function () {
     // 定义一个对象，存放产品信息，在构造函数中声明产品所拥有的属性
@@ -83,8 +85,39 @@ app.get('/api/product/:id/comments', function (req, res) {
 var server = app.listen(8000, 'localhost', function () {
     console.log('服务器已启动，地址是http://localhost:8000');
 });
-// WebSocket
+//-----------------------------------------------------------------------------------------
+var subscriptions = new Map(); // 储存每个客户端订阅的信息<ws，关注的商品id>
+// WebSocket 服务器
 var wsServer = new ws_1.Server({ port: 8085 });
 wsServer.on('connection', function (websocket) {
-    websocket.send('这个消息是服务器主动推送的');
+    // websocket.send('个消息是服务器主动推送的');
+    websocket.on('message', function (message) {
+        var messageObj = JSON.parse(message); // rs
+        var productIds = subscriptions.get(websocket) || [];
+        subscriptions.set(websocket, productIds.concat([messageObj.productId]));
+    });
 });
+var currentBids = new Map(); // 储存每个商品的最新出价<商品id，最新价格>
+setInterval(function () {
+    products.forEach(function (p) {
+        var currentBid = currentBids.get(p.id) || p.price;
+        var newBid = currentBid + Math.random() * 5;
+        currentBids.set(p.id, newBid);
+    });
+    // 两个入参顺序千万不能换
+    subscriptions.forEach(function (productIds, ws) {
+        // 生成一个已关注商品最新报价的数组 (将商品和最新报价，封装为一个对象)
+        // console.log('server productIds', productIds);
+        if (ws.readyState === 1) {
+            var newBids = productIds.map(function (pid) { return ({
+                productId: pid,
+                bid: currentBids.get(pid)
+            }); });
+            // console.log('server new Bids:', newBids);
+            ws.send(JSON.stringify(newBids));
+        }
+        else {
+            subscriptions.delete(ws);
+        }
+    });
+}, 2000);

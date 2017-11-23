@@ -1,5 +1,8 @@
 import * as express from 'express';
 import {Server} from 'ws';
+import 'rxjs/add/operator/find';
+import 'rxjs/add/operator/map';
+import {readdirSync} from "fs";
 
 const app = express();
 
@@ -80,8 +83,43 @@ const server = app.listen(8000, 'localhost', () => {
     console.log('服务器已启动，地址是http://localhost:8000');
 });
 
-// WebSocket
+//-----------------------------------------------------------------------------------------
+
+const subscriptions = new Map<any, number[]>(); // 储存每个客户端订阅的信息<ws，关注的商品id>
+
+// WebSocket 服务器
 const wsServer = new Server({port: 8085});
 wsServer.on('connection', websocket => {
-    websocket.send('这个消息是服务器主动推送的');
+    // websocket.send('个消息是服务器主动推送的');
+    websocket.on('message', message => {
+        let messageObj = JSON.parse(message); // rs
+        let productIds = subscriptions.get(websocket) || [];
+        subscriptions.set(websocket, [...productIds, messageObj.productId]);
+    });
 });
+
+const currentBids = new Map<number, number>(); // 储存每个商品的最新出价<商品id，最新价格>
+
+setInterval(() => {
+    products.forEach(p => {
+        let currentBid = currentBids.get(p.id) || p.price;
+        let newBid = currentBid + Math.random() * 5;
+        currentBids.set(p.id, newBid);
+    });
+
+    // 两个入参顺序千万不能换
+    subscriptions.forEach( (productIds: number[], ws) => {
+        // 生成一个已关注商品最新报价的数组 (将商品和最新报价，封装为一个对象)
+        // console.log('server productIds', productIds);
+        if(ws.readyState === 1){
+            let newBids = productIds.map( pid => ({
+                productId: pid,
+                bid: currentBids.get(pid)
+            }));
+            // console.log('server new Bids:', newBids);
+            ws.send(JSON.stringify(newBids));
+        }else{
+            subscriptions.delete(ws);
+        }
+    });
+}, 2000);
