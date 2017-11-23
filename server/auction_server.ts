@@ -1,8 +1,8 @@
 import * as express from 'express';
+import * as path from 'path';
 import {Server} from 'ws';
 import 'rxjs/add/operator/find';
 import 'rxjs/add/operator/map';
-import {readdirSync} from "fs";
 
 const app = express();
 
@@ -49,8 +49,11 @@ const comments: Comment [] = [
 ];
 
 app.get('/', (req, res) => {
-    res.send('hello express');
+    res.send('hello expres2s');
 });
+
+// __dirname代表当前目录，'..'代表上一级目录，'client'代表目标文件夹叫client
+//app.use('/', express.static(path.join(__dirname, '..', 'client')));
 
 // 产品列表
 app.get('/api/products', (req, res) => {
@@ -80,7 +83,8 @@ app.get('/api/product/:id/comments', (req, res) => {
 });
 
 const server = app.listen(8000, 'localhost', () => {
-    console.log('服务器已启动，地址是http://localhost:8000');
+    console.log(path.join(__dirname, '..', 'client'));
+    console.log('服务器已启动了，地址是http://localhost:8000');
 });
 
 //-----------------------------------------------------------------------------------------
