@@ -48,12 +48,12 @@ const comments: Comment [] = [
     new Comment(4, 2, '2017-11-04 14:05:00', '赵六', 4, '东西4不错')
 ];
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.send('hello expres2s');
-});
+});*/
 
 // __dirname代表当前目录，'..'代表上一级目录，'client'代表目标文件夹叫client
-//app.use('/', express.static(path.join(__dirname, '..', 'client')));
+app.use('/', express.static(path.join(__dirname, '..', 'client')));
 
 // 产品列表
 app.get('/api/products', (req, res) => {
