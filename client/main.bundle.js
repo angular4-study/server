@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n      <app-search></app-search>\r\n    </div>\r\n    <div class=\"col-md-9\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-3\">\n      <app-search></app-search>\n    </div>\n    <div class=\"col-md-9\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>\n<app-footer></app-footer>\n\n"
 
 /***/ }),
 
@@ -48,15 +48,20 @@ module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <d
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 /**
  * 从ng的核心模块angular/core里引入了一个叫Component的装饰器
  */
+
 
 /**
  * AppComponent是一个普通的typescript类，通过装饰器附加元数据到typescript类上面
@@ -73,6 +78,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app慕课网angular 入门实战';
+        console.log(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].version);
     }
     return AppComponent;
 }());
@@ -81,7 +87,8 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
@@ -209,7 +216,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/carousel/carousel.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li></li>\r\n    <li></li>\r\n    <li></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\">\r\n    <div class=\"item active\">\r\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\r\n    </div>\r\n    <div class=\"item\">\r\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\r\n    </div>\r\n    <div class=\"item\">\r\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"javascript:$('.carousel').carousel('prev')\">\r\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"javascript:$('.carousel').carousel('next')\">\r\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n  </a>\r\n</div>\r\n"
+module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li></li>\n    <li></li>\n    <li></li>\n  </ol>\n  <div class=\"carousel-inner\">\n    <div class=\"item active\">\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\n    </div>\n    <div class=\"item\">\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\n    </div>\n    <div class=\"item\">\n      <img class=\"slide-image\" src=\"http://via.placeholder.com/800x300\" alt=\"\">\n    </div>\n  </div>\n  <a class=\"left carousel-control\" href=\"javascript:$('.carousel').carousel('prev')\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n  </a>\n  <a class=\"right carousel-control\" href=\"javascript:$('.carousel').carousel('next')\">\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n  </a>\n</div>\n"
 
 /***/ }),
 
@@ -270,7 +277,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <hr>\r\n  <footer>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <p class=\"text-center\"><b>慕课网</b>-Angular入门实战2017</p>\r\n      </div>\r\n    </div>\r\n  </footer>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <hr>\n  <footer>\n    <div class=\"row\">\n      <div class=\"col-lg-12\">\n        <p class=\"text-center\"><b>慕课网</b>-Angular入门实战2017</p>\n      </div>\n    </div>\n  </footer>\n</div>\n"
 
 /***/ }),
 
@@ -331,7 +338,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row carousel-container\">\r\n  <app-carousel></app-carousel>\r\n</div>\r\n<div class=\"row\">\r\n  <app-product></app-product>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"row carousel-container\">\n  <app-carousel></app-carousel>\n</div>\n<div class=\"row\">\n  <app-product></app-product>\n</div>\n\n"
 
 /***/ }),
 
@@ -392,7 +399,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\r\n              data-target=\".navbar-ex1-collapse\">\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a class=\"navbar-brand\" href=\"#\">在线竞拍</a>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a href=\"#\">关于我们</a></li>\r\n        <li><a href=\"#\">联系我们</a></li>\r\n        <li><a href=\"#\">网站地图</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\n              data-target=\".navbar-ex1-collapse\">\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">在线竞拍</a>\n    </div>\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n      <ul class=\"nav navbar-nav\">\n        <li><a href=\"#\">关于我们</a></li>\n        <li><a href=\"#\">联系我们</a></li>\n        <li><a href=\"#\">网站地图</a></li>\n      </ul>\n    </div>\n  </div>\n\n</nav>\n"
 
 /***/ }),
 
@@ -500,7 +507,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product-detail/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"thumbnail\">\r\n  <img src=\"http://via.placeholder.com/820x230\">\r\n  <div>\r\n    <h4 class=\"pull-right\">{{product?.price}}元</h4>\r\n    <h4>{{product?.title}}</h4>\r\n    <p>{{product?.desc}}</p>\r\n  </div>\r\n  <div>\r\n    <p class=\"pull-right\">{{comments?.length}}</p>\r\n    <p>\r\n      <app-stars [rating]=\"product?.rating\"></app-stars>\r\n    </p>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"thumbnail\">\r\n  <button class=\"btn btn-default btn-lg\"\r\n    [class.active]=\"isWatched\"\r\n    (click)=\"watchProduct()\">\r\n    {{isWatched ? '取消关注' : '关注'}}\r\n  </button>\r\n  <label>最新出价：{{currentBid | number: '.2-2'}}元</label>\r\n</div>\r\n\r\n<div class=\"well\">\r\n  <div>\r\n    <button class=\"btn btn-success\" (click)=\"isCommentHidden = !isCommentHidden\">发表评论</button>\r\n  </div>\r\n  <div [hidden]=\"isCommentHidden\">\r\n    <div>\r\n      <!-- [(rating)] 能这么写，是因为rating和ratingChange的命名，必须这么命名，才能这么写\r\n       【输出属性名 = 输入属性名 + Change】-->\r\n      <app-stars [(rating)]=\"newRating\" [readonly]=\"false\"></app-stars>\r\n    </div>\r\n    <div>\r\n      <textarea [(ngModel)]=\"newComment\"></textarea>\r\n    </div>\r\n    <div>\r\n      <button class=\"btn\" (click)=\"addComment()\">提交</button>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\" *ngFor=\"let comment of comments\">\r\n    <hr>\r\n    <div class=\"col-md-12\">\r\n      <app-stars [rating]=\"comment.rating\"></app-stars>\r\n      <span>{{comment.user}}</span>\r\n      <span class=\"pull-right\">{{comment.timestamp}}</span>\r\n      <p></p>\r\n      <p>{{comment.content}}</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"thumbnail\">\n  <img src=\"http://via.placeholder.com/820x230\">\n  <div>\n    <h4 class=\"pull-right\">{{product?.price}}元</h4>\n    <h4>{{product?.title}}</h4>\n    <p>{{product?.desc}}</p>\n  </div>\n  <div>\n    <p class=\"pull-right\">{{comments?.length}}</p>\n    <p>\n      <app-stars [rating]=\"product?.rating\"></app-stars>\n    </p>\n  </div>\n</div>\n\n<div class=\"thumbnail\">\n  <button class=\"btn btn-default btn-lg\"\n    [class.active]=\"isWatched\"\n    (click)=\"watchProduct()\">\n    {{isWatched ? '取消关注' : '关注'}}\n  </button>\n  <label>最新出价：{{currentBid | number: '.2-2'}}元</label>\n</div>\n\n<div class=\"well\">\n  <div>\n    <button class=\"btn btn-success\" (click)=\"isCommentHidden = !isCommentHidden\">发表评论</button>\n  </div>\n  <div [hidden]=\"isCommentHidden\">\n    <div>\n      <!-- [(rating)] 能这么写，是因为rating和ratingChange的命名，必须这么命名，才能这么写\n       【输出属性名 = 输入属性名 + Change】-->\n      <app-stars [(rating)]=\"newRating\" [readonly]=\"false\"></app-stars>\n    </div>\n    <div>\n      <textarea [(ngModel)]=\"newComment\"></textarea>\n    </div>\n    <div>\n      <button class=\"btn\" (click)=\"addComment()\">提交</button>\n    </div>\n  </div>\n\n  <div class=\"row\" *ngFor=\"let comment of comments\">\n    <hr>\n    <div class=\"col-md-12\">\n      <app-stars [rating]=\"comment.rating\"></app-stars>\n      <span>{{comment.user}}</span>\n      <span class=\"pull-right\">{{comment.timestamp}}</span>\n      <p></p>\n      <p>{{comment.content}}</p>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -611,7 +618,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div class=\"row\">-->\r\n  <!--<div class=\"col-sm-12\">-->\r\n    <!--<div class=\"form-group\">-->\r\n      <!--&lt;!&ndash;用formControl指令把input与后台的titleFilter字段绑定在一起，当input里面的值发生改变后-->\r\n        <!--会往外发射value change事件，我们要做的就是订阅这个值，进行处理&ndash;&gt;-->\r\n      <!--<input class=\"form-control\" placeholder=\"请输入商品名称\"-->\r\n      <!--[formControl]=\"titleFilter\">-->\r\n    <!--</div>-->\r\n  <!--</div>-->\r\n<!--</div>-->\r\n\r\n<!-- 循环products这个属性，每次迭代的是product  -->\r\n<!-- 拿到列表后，给列表加一个自定义管道（name = filter），过滤数据  -->\r\n<div *ngFor=\"let product of products | async\" class=\"col-md-4 col-sm-4 col-lg-4\">\r\n  <div class=\"thumbnail\">\r\n    <!-- 标签绑定：把HTML的一个标签的属性和controller上的一个属性绑定 -->\r\n    <img [src]=\"imgUrl\">\r\n    <div class=\"caption\">\r\n      <h4 class=\"pull-right\">{{product.price}}元</h4>\r\n      <h4><a [routerLink]=\"['/product',product.id]\">{{product.title}}</a></h4>\r\n      <p>{{product.desc}}</p>\r\n    </div>\r\n    <div>\r\n      <!-- 输入属性：将父组件的值传递到子组件  -->\r\n      <app-stars [rating]=\"product.rating\"></app-stars>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!--<div class=\"row\">-->\n  <!--<div class=\"col-sm-12\">-->\n    <!--<div class=\"form-group\">-->\n      <!--&lt;!&ndash;用formControl指令把input与后台的titleFilter字段绑定在一起，当input里面的值发生改变后-->\n        <!--会往外发射value change事件，我们要做的就是订阅这个值，进行处理&ndash;&gt;-->\n      <!--<input class=\"form-control\" placeholder=\"请输入商品名称\"-->\n      <!--[formControl]=\"titleFilter\">-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</div>-->\n\n<!-- 循环products这个属性，每次迭代的是product  -->\n<!-- 拿到列表后，给列表加一个自定义管道（name = filter），过滤数据  -->\n<div *ngFor=\"let product of products | async\" class=\"col-md-4 col-sm-4 col-lg-4\">\n  <div class=\"thumbnail\">\n    <!-- 标签绑定：把HTML的一个标签的属性和controller上的一个属性绑定 -->\n    <img [src]=\"imgUrl\">\n    <div class=\"caption\">\n      <h4 class=\"pull-right\">{{product.price}}元</h4>\n      <h4><a [routerLink]=\"['/product',product.id]\">{{product.title}}</a></h4>\n      <p>{{product.desc}}</p>\n    </div>\n    <div>\n      <!-- 输入属性：将父组件的值传递到子组件  -->\n      <app-stars [rating]=\"product.rating\"></app-stars>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -690,7 +697,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<form [formGroup]=\"formModel\" (ngSubmit)=\"onSearch()\" novalidate>\r\n  <div class=\"form-group\" [class.has-error]=\"formModel.hasError('minlength', 'title')\">\r\n    <label for=\"productTitle\">商品名称：</label>\r\n    <input formControlName=\"title\" type=\"text\" id=\"productTitle\" placeholder=\"商品名称\" class=\"form-control\">\r\n    <span class=\"help-block\" [class.hidden]=\"!formModel.hasError('minlength', 'title')\">\r\n      请至少输入3个字符\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group\" [class.has-error]=\"formModel.hasError('positiveNumber', 'price')\">\r\n    <label for=\"productPrice\">商品价格：</label>\r\n    <input formControlName=\"price\" type=\"number\" id=\"productPrice\" placeholder=\"商品价格\" class=\"form-control\">\r\n    <span class=\"help-block\" [class.hidden]=\"!formModel.hasError('positiveNumber', 'price')\">\r\n      请输入正数\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"productCategory\">商品类别：</label>\r\n    <select formControlName=\"category\" id=\"productCategory\" class=\"form-control\">\r\n      <option value=\"-1\">全部分类</option>\r\n      <option *ngFor=\"let categ of categories\" [value]=\"categ\">{{categ}}</option>\r\n    </select>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <button type=\"submit\" class=\"btn btn-primary btn-block\">搜索</button>\r\n  </div>\r\n</form>\r\n"
+module.exports = "\n<form [formGroup]=\"formModel\" (ngSubmit)=\"onSearch()\" novalidate>\n  <div class=\"form-group\" [class.has-error]=\"formModel.hasError('minlength', 'title')\">\n    <label for=\"productTitle\">商品名称：</label>\n    <input formControlName=\"title\" type=\"text\" id=\"productTitle\" placeholder=\"商品名称\" class=\"form-control\">\n    <span class=\"help-block\" [class.hidden]=\"!formModel.hasError('minlength', 'title')\">\n      请至少输入3个字符\n    </span>\n  </div>\n  <div class=\"form-group\" [class.has-error]=\"formModel.hasError('positiveNumber', 'price')\">\n    <label for=\"productPrice\">商品价格：</label>\n    <input formControlName=\"price\" type=\"number\" id=\"productPrice\" placeholder=\"商品价格\" class=\"form-control\">\n    <span class=\"help-block\" [class.hidden]=\"!formModel.hasError('positiveNumber', 'price')\">\n      请输入正数\n    </span>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"productCategory\">商品类别：</label>\n    <select formControlName=\"category\" id=\"productCategory\" class=\"form-control\">\n      <option value=\"-1\">全部分类</option>\n      <option *ngFor=\"let categ of categories\" [value]=\"categ\">{{categ}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <button type=\"submit\" class=\"btn btn-primary btn-block\">搜索</button>\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -741,7 +748,7 @@ var SearchComponent = (function () {
     };
     SearchComponent.prototype.onSearch = function () {
         if (this.formModel.valid) {
-            console.log(this.formModel.value);
+            console.log('value:', this.formModel.value);
             this.productService.searchEvent.emit(this.formModel.value);
         }
     };
@@ -947,7 +954,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/stars/stars.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  <span *ngFor=\"let star of stars; let i = index;\" class=\"glyphicon glyphicon-star\"\r\n        [class.glyphicon-star-empty]=\"star\" (click)=\"clickStar(i)\"></span>\r\n  <span>{{rating | number: '1.0-2'}}星</span>\r\n  <!-- span元素是否出现被包裹的样式，取决于star值是true还是false，true为显示 (注释不能写在标签里)-->\r\n</p>\r\n"
+module.exports = "<p>\n  <span *ngFor=\"let star of stars; let i = index;\" class=\"glyphicon glyphicon-star\"\n        [class.glyphicon-star-empty]=\"star\" (click)=\"clickStar(i)\"></span>\n  <span>{{rating | number: '1.0-2'}}星</span>\n  <!-- span元素是否出现被包裹的样式，取决于star值是true还是false，true为显示 (注释不能写在标签里)-->\n</p>\n"
 
 /***/ }),
 
@@ -1040,7 +1047,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/user/user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  user works!\r\n</p>\r\n"
+module.exports = "<p>\n  user works!\n</p>\n"
 
 /***/ }),
 
@@ -1089,9 +1096,15 @@ UserComponent = __decorate([
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+/**
+ * 通用的，定义了哪些文件需要定义.
+ * 就这里来说，表名了production: false这个值必须在每种环境里都有
+ * @type {{production: boolean}}
+ */
 // The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false
+    production: false,
+    version: 'V1.0.0 Dev'
 };
 //# sourceMappingURL=environment.js.map
 
@@ -1106,19 +1119,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-//关闭angular的开发者模式
+// 关闭angular的开发者模式
 
-//告诉angular使用哪个模块来启动应用
+// 告诉angular使用哪个模块来启动应用
 
-//导入appmodule
+// 导入appModule
 
-//导入环境配置
+// 导入环境配置
 
-//如果是生产环境，就关闭开发者模式
+// 如果是生产环境，就启用生产模式
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
 }
-//传入appmodule来启动应用，是整个应用的起点
+// 传入appModule来启动应用，是整个应用的起点
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 //# sourceMappingURL=main.js.map
